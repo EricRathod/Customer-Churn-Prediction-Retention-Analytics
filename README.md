@@ -25,7 +25,7 @@ The final solution includes an interactive **Power BI dashboard**, machine learn
 ## 📊 Power BI Dashboard
 
 The Power BI dashboard provides a business-focused overview of customer churn and retention analytics.
-
+Power bi screenshot.png
 ### Key KPIs
 
 - **Total Customers:** 7,032
@@ -42,7 +42,7 @@ The Power BI dashboard provides a business-focused overview of customer churn an
 - High-Risk Customer Identification
 - Recommended Retention Actions
 
-![Customer Churn Dashboard](images/dashboard.png)
+![Customer Churn Dashboard](Power bi screenshot.png)
 
 ---
 
@@ -72,7 +72,7 @@ Model performance was compared using:
 
 Logistic Regression achieved the highest ROC-AUC score in the model comparison.
 
-![ROC Curve Comparison](images/roc_curve.png)
+![ROC Curve Comparison](roc_curve_comparison.png)
 
 ---
 
@@ -85,8 +85,7 @@ The Logistic Regression confusion matrix provides insight into the model's churn
 - **310** customers who stayed were predicted as churned.
 - **76** churned customers were predicted as staying.
 
-![Confusion Matrix](images/confusion_matrix.png)
-
+**![Confusion Matrix](confusion_matrix.png)**
 ---
 
 ## 🔍 Key Churn Factors
@@ -105,7 +104,7 @@ Some of the strongest factors include:
 - Fiber optic internet service
 - Electronic check payment method
 
-![Feature Importance](images/feature_importance.png)
+![Feature Importance](feature_importance.png)
 
 ---
 
