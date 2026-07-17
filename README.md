@@ -1,66 +1,67 @@
-# 📊 Customer Churn Prediction & Retention Analytics Platform
+# 📊 Customer Churn Prediction & Retention Analytics
 
-An end-to-end data analytics and machine learning project designed to analyze customer churn, identify key churn drivers, predict at-risk customers, and provide actionable retention recommendations.
+An end-to-end data analytics and machine learning project designed to identify customers at risk of churn and provide actionable retention recommendations.
 
-The project combines **Python, SQL, Machine Learning, and Power BI** to transform raw telecom customer data into meaningful business insights and customer retention strategies.
+The project combines **Python, Machine Learning, SQL, and Power BI** to analyze customer behavior, predict churn probability, identify key churn drivers, segment customers by risk level, and visualize insights through an interactive dashboard.
 
 ---
 
-## 📌 Project Overview
+## 🎯 Project Objective
 
 Customer churn is a major challenge for subscription-based businesses. Retaining existing customers is often more cost-effective than acquiring new ones.
 
-This project analyzes telecom customer behavior to answer key business questions:
+The objectives of this project are to:
 
-- How many customers are churning?
-- What factors contribute most to customer churn?
-- Which customers are at high risk of leaving?
-- Which machine learning model performs best for churn prediction?
-- What retention actions can be recommended for at-risk customers?
-
-The final solution includes an interactive **Power BI dashboard**, machine learning models, SQL analysis, and customer-level churn risk predictions.
+- Analyze customer churn patterns
+- Identify the main factors influencing customer churn
+- Build and compare machine learning classification models
+- Predict customer churn probability
+- Segment customers into Low, Medium, and High Risk groups
+- Generate recommended retention actions
+- Develop an interactive Power BI dashboard for business analysis
 
 ---
 
 ## 📊 Power BI Dashboard
 
-The Power BI dashboard provides a business-focused overview of customer churn and retention analytics.
-Power bi screenshot.png
-### Key KPIs
+The Power BI dashboard provides an overview of customer churn and retention analytics, including:
 
-- **Total Customers:** 7,032
-- **Churned Customers:** 1,869
-- **Churn Rate:** 26.58%
-- **Average Monthly Charges:** $64.80
-
-### Dashboard Features
-
-- Churned Customers by Contract
+- Total Customers
+- Churned Customers
+- Churn Rate
+- Average Monthly Charges
+- Churned Customers by Contract Type
 - Churned Customers by Internet Service
 - Customer Risk Level Distribution
 - Top Factors Influencing Customer Churn
-- High-Risk Customer Identification
-- Recommended Retention Actions
+- Customer-Level Risk and Retention Recommendations
 
-![Customer Churn Dashboard](Power bi screenshot.png)
+![Customer Churn Prediction and Retention Analytics Dashboard](images/dashboard.png)
+
+---
+
+## 📌 Key Business Insights
+
+The analysis identified several important patterns associated with customer churn:
+
+- Customers with **month-to-month contracts** have significantly higher churn.
+- **Customer tenure** is one of the strongest factors influencing churn.
+- Customers using **fiber optic internet service** show higher churn levels.
+- **Monthly Charges** and **Total Charges** are important predictors of customer behavior.
+- Customers without services such as **Online Security** and **Tech Support** may have higher churn risk.
+- Customer risk segmentation can help businesses prioritize retention campaigns.
 
 ---
 
 ## 🤖 Machine Learning Models
 
-Three classification algorithms were trained and evaluated:
+Three classification models were trained and evaluated:
 
 1. Logistic Regression
 2. Decision Tree
 3. Random Forest
 
-Model performance was compared using:
-
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC
+The models were compared using classification metrics and ROC-AUC performance.
 
 ### ROC-AUC Results
 
@@ -70,222 +71,172 @@ Model performance was compared using:
 | Decision Tree | 0.83 |
 | Random Forest | 0.83 |
 
-Logistic Regression achieved the highest ROC-AUC score in the model comparison.
+Logistic Regression achieved the highest ROC-AUC score and was used as a strong baseline model for customer churn prediction.
 
-![ROC Curve Comparison](roc_curve_comparison.png)
+---
+
+## 📈 ROC Curve Comparison
+
+The ROC curve compares the predictive performance of the three machine learning models.
+
+![ROC Curve Comparison](images/roc_curve_comparison.png)
 
 ---
 
 ## 🎯 Confusion Matrix
 
-The Logistic Regression confusion matrix provides insight into the model's churn classification performance.
+The confusion matrix below shows the classification results for the Logistic Regression model.
 
-- **723** customers who stayed were correctly classified.
-- **298** churned customers were correctly identified.
-- **310** customers who stayed were predicted as churned.
-- **76** churned customers were predicted as staying.
+![Logistic Regression Confusion Matrix](images/confusion_matrix.png)
 
-**![Confusion Matrix](confusion_matrix.png)**
 ---
 
-## 🔍 Key Churn Factors
+## 🔍 Top Factors Influencing Customer Churn
 
-The analysis identified several important factors influencing customer churn.
+Feature importance analysis was used to identify the variables that contribute most strongly to churn prediction.
 
-Some of the strongest factors include:
+Important factors include:
 
-- Customer tenure
+- Tenure
 - Month-to-month contracts
-- Total charges
-- Monthly charges
+- Total Charges
+- Monthly Charges
 - Two-year contracts
-- Online security
-- Technical support
-- Fiber optic internet service
-- Electronic check payment method
+- Online Security
+- Tech Support
+- Fiber Optic Internet Service
+- Electronic Check Payment Method
 
-![Feature Importance](feature_importance.png)
-
----
-
-## 💡 Key Business Insights
-
-The analysis highlights several important customer churn patterns:
-
-- Customers with **month-to-month contracts** have the highest churn volume.
-- Customers using **fiber optic internet service** show higher churn compared with other internet service categories.
-- **Customer tenure** is one of the strongest factors influencing churn.
-- Contract type and monthly charges are important indicators of customer retention behavior.
-- Customers without services such as **online security** and **technical support** may have increased churn risk.
-
-These insights can help businesses identify vulnerable customer segments and develop targeted retention strategies.
+![Top Factors Influencing Customer Churn](images/feature_importance.png)
 
 ---
 
-## 🎯 Customer Risk Segmentation
+## ⚠️ Customer Risk Segmentation
 
-Customers are classified into three risk categories based on predicted churn probability:
+Customers are segmented into three risk categories based on their predicted churn probability:
 
-- **Low Risk**
-- **Medium Risk**
-- **High Risk**
+| Risk Level | Description | Recommended Action |
+|---|---|---|
+| Low Risk | Customers with low predicted churn probability | Maintain regular engagement |
+| Medium Risk | Customers showing moderate churn risk | Send personalized loyalty offers |
+| High Risk | Customers with high predicted churn probability | Offer targeted retention incentives |
 
-The platform also provides recommended actions based on customer risk.
+This segmentation allows businesses to focus retention efforts on customers who are most likely to leave.
 
-Examples include:
+---
 
-- Maintain regular engagement
-- Send personalized loyalty offers
-- Offer discounted annual contracts
+## 💡 Retention Recommendations
 
-This transforms machine learning predictions into actionable business recommendations.
+Based on the analysis, businesses can consider the following retention strategies:
+
+- Encourage month-to-month customers to switch to annual or long-term contracts.
+- Provide targeted discounts or incentives to high-risk customers.
+- Promote Online Security and Tech Support services.
+- Develop personalized loyalty offers for medium-risk customers.
+- Monitor customers with high monthly charges and short tenure.
+- Prioritize retention campaigns using churn probability and risk segmentation.
 
 ---
 
 ## 🛠️ Technologies Used
 
-### Programming & Data Analysis
-
-- Python
-- Pandas
-- NumPy
-
-### Database
-
-- SQL
-- SQLite
-
-### Machine Learning
-
-- Scikit-learn
-- Logistic Regression
-- Decision Tree
-- Random Forest
-
-### Data Visualization
-
-- Matplotlib
-- Power BI
-
-### Development Environment
-
-- Google Colab
-- Jupyter Notebook
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Scikit-learn**
+- **Matplotlib**
+- **SQL / SQLite**
+- **Power BI**
+- **Jupyter Notebook / Google Colab**
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Workflow
 
-```text
-Customer-Churn-Prediction-Retention-Analytics/
-│
-├── data/
-│   ├── customer_churn_powerbi.csv
-│   ├── feature_importance.csv
-│   ├── kpi_summary.csv
-│   └── model_performance.csv
-│
-├── database/
-│   └── customer_churn.db
-│
-├── notebook/
-│   └── Customer_Churn_Prediction_Retention_Analytics_Platform.ipynb
-│
-├── powerbi/
-│   └── Customer_Churn_Prediction_Retention_Analytics_Dashboard.pbix
-│
-├── images/
-│   ├── dashboard.png
-│   ├── confusion_matrix.png
-│   ├── feature_importance.png
-│   └── roc_curve.png
-│
-├── README.md
-├── requirements.txt
-└── LICENSE
-```
+The project follows an end-to-end analytics and machine learning workflow:
+
+1. Data Collection
+2. Data Cleaning and Preprocessing
+3. Exploratory Data Analysis
+4. Feature Engineering
+5. Machine Learning Model Training
+6. Model Evaluation
+7. ROC-AUC Comparison
+8. Feature Importance Analysis
+9. Customer Churn Probability Prediction
+10. Customer Risk Segmentation
+11. Retention Recommendation Generation
+12. SQL Data Storage
+13. Power BI Dashboard Development
 
 ---
 
-## ⚙️ Project Workflow
+## 📊 Dataset Summary
 
-**Raw Customer Data**
+- **Total Customers:** 7,032
+- **Churned Customers:** 1,869
+- **Churn Rate:** 26.58%
+- **Average Monthly Charges:** 64.80
 
-↓
-
-**Data Cleaning & Preprocessing**
-
-↓
-
-**Exploratory Data Analysis**
-
-↓
-
-**SQL Analysis**
-
-↓
-
-**Feature Engineering**
-
-↓
-
-**Machine Learning Model Training**
-
-↓
-
-**Model Evaluation**
-
-↓
-
-**Customer Churn Risk Prediction**
-
-↓
-
-**Retention Recommendations**
-
-↓
-
-**Power BI Dashboard**
+The dataset contains customer demographic information, account details, subscribed services, contract information, payment methods, and churn status.
 
 ---
 
-## 📈 Business Value
+## 📁 Repository Contents
 
-This project demonstrates how data analytics and machine learning can support customer retention strategies.
+The repository contains:
 
-The solution can help businesses:
-
-- Identify customers at risk of churn
-- Understand the main factors contributing to churn
-- Segment customers based on churn risk
-- Develop targeted retention campaigns
-- Support data-driven decision-making
+- Machine learning analysis notebook
+- Customer churn dataset
+- Power BI dashboard file
+- Customer churn predictions
+- Feature importance results
+- Model performance results
+- KPI summary
+- SQLite database
+- ROC curve visualization
+- Confusion matrix
+- Feature importance visualization
+- Power BI dashboard screenshot
 
 ---
 
-## 🚀 Future Improvements
+## 🚀 How to Run the Project
 
-Future versions of the project could include:
+1. Clone this repository.
+2. Open the Jupyter Notebook or upload it to Google Colab.
+3. Install the required Python libraries.
+4. Run the notebook cells in sequence.
+5. Review the generated machine learning results and visualizations.
+6. Open the `.pbix` file using Power BI Desktop to explore the interactive dashboard.
 
-- Hyperparameter tuning for machine learning models
+---
+
+## 🔮 Future Improvements
+
+Future versions of this project could include:
+
+- Hyperparameter tuning
 - XGBoost or LightGBM models
 - SHAP-based model explainability
-- Real-time churn prediction API
 - Automated model retraining
-- Cloud deployment
-- Power BI Service integration
+- Real-time churn prediction API
+- Deployment of the dashboard to Power BI Service
+- Integration with CRM systems for automated retention campaigns
 
 ---
 
-## 👤 Author
+## 👨‍💻 Author
 
 **Eric Rathod**
 
-Master of Artificial Intelligence – Design and Development  
+Master's in Artificial Intelligence – Design and Development  
 Seneca Polytechnic, Toronto, Canada
 
-### Skills
-
-`Python` `SQL` `Machine Learning` `Power BI` `Data Analytics` `Scikit-learn` `Pandas` `Business Intelligence`
-
 ---
+
+## ⭐ Project Summary
+
+This project demonstrates an end-to-end approach to solving a real-world customer retention problem by combining **data analytics, machine learning, SQL, and business intelligence**.
+
+The final solution not only predicts customer churn but also converts machine learning predictions into customer risk levels and actionable retention recommendations that can support data-driven business decisions.
